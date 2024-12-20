@@ -6,6 +6,8 @@ import corsMiddleware from 'cors';
 import compressionMiddleware from 'compression';
 import morganMiddleware from 'morgan';
 
+import errorMiddleware from '../bLove/bMiddleware/aErrorMiddleware';
+
 
 const appConnection = express();
 
@@ -27,8 +29,9 @@ appConnection.use(cookieParserMiddleware());
 appConnection.use(compressionMiddleware());
 
 // Routing Middleware
-appConnection.get("/", (request, response) => {
-  response.send(`Welcome to ${process.env.APPLICATION}`)
-})
+appConnection.get("/", (request, response) => { response.send(`Welcome to ${process.env.APPLICATION}`) })
+
+// Erro Middleware
+appConnection.use(errorMiddleware)
 
 export default appConnection;

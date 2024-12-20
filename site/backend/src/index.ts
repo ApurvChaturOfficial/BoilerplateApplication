@@ -27,7 +27,7 @@ const server = http.createServer(appConnection);
 
 // Connect Server
 server.listen(process.env.PORT, () => {
-  console.log(`Server is listening on http://localhost:${process.env.PORT} on worker service ${process.pid}`)
+  console.log(`Server is listening on ${process.env.BACKEND_URL}:${process.env.PORT} on worker service ${process.pid}`)
 });
 
 // Unhandled Promise Rejection
