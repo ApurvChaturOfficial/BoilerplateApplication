@@ -1,0 +1,33 @@
+/site/backend/node_modules
+/site/backend/src/config/
+
+site/frontend/node_modules
+site/frontend/.env
+
+site/admin/node_modules
+site/admin/.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
