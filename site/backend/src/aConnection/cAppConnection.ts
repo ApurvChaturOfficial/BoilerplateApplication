@@ -8,6 +8,8 @@ import morganMiddleware from 'morgan';
 
 import errorMiddleware from '../bLove/bMiddleware/aErrorMiddleware';
 
+import { baseRouter } from '../bLove/aMCVR/dRoute/admin/aSetting/cBaseRoute';
+
 
 const appConnection = express();
 
@@ -17,7 +19,7 @@ appConnection.use(corsMiddleware({ origin:
   process.env.ENVIRONMENT === "Production" ? [
     String(process.env.BACKEND_URL)
   ] :
-  process.env.ENVIRONMENT === "UAT" ?  [
+  process.env.ENVIRONMENT === "Testing" ?  [
     String(process.env.BACKEND_URL)
   ] : [
     String(process.env.BACKEND_URL)
@@ -30,8 +32,9 @@ appConnection.use(compressionMiddleware());
 
 // Routing Middleware
 appConnection.get("/", (request, response) => { response.send(`Welcome to ${process.env.APPLICATION}`) })
+appConnection.use("/api/v1/base/", baseRouter);
 
-// Erro Middleware
+// Error Middleware
 appConnection.use(errorMiddleware)
 
 export default appConnection;
