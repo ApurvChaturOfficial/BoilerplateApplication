@@ -24,8 +24,8 @@ const baseController = (Model=BaseModel, Label="Base") => ({
       response.status(200).json({
         success: true,
         message: `${Label} Listed Successfully`,
-        list: list,
         total: total,
+        list: list,
       })
     }
   ),

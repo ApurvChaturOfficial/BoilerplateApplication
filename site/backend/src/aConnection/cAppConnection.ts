@@ -31,7 +31,7 @@ appConnection.use(cookieParserMiddleware());
 appConnection.use(compressionMiddleware());
 
 // Routing Middleware
-appConnection.get("/", (request, response) => { response.send(`Welcome to ${process.env.APPLICATION}`) })
+appConnection.get("/", (_request, response) => { response.send(`Welcome to ${process.env.APPLICATION}`) })
 appConnection.use("/api/v1/base/", baseRouter);
 
 // Error Middleware

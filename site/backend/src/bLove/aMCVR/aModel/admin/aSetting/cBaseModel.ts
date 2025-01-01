@@ -16,7 +16,6 @@ const schema = new mongoose.Schema<BaseModelType>({
 
 // Pre Save
 schema.pre("save", function(next) {
-  console.log("first")
   this.aSlug = slugify(String(this?.aTitle), { lower: true, strict: true });
   next();
 })

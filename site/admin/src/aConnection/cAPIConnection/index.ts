@@ -16,7 +16,9 @@ const apiConnection = createApi({
     ),
     credentials: "include"
   }),
-  tagTypes: [ ],
+  tagTypes: [
+    "baseList", "baseRetrieve"
+  ],
   endpoints: () => ({})
 })
 
