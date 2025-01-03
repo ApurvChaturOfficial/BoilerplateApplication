@@ -5,7 +5,7 @@ const ProtectedComponent = ({ children }: { children: React.ReactNode }) => {
   // JSX
   return (
     <React.Fragment>
-      ProtectedComponent
+      {/* ProtectedComponent */}
       { children }
     </React.Fragment>
   )

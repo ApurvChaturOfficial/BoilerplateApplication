@@ -1,11 +1,19 @@
 import React from "react"
 
+import TypicalCreateComponent from "../../../../component/bTypicalCreateComponent";
 
-const BaseCreateComponent = () => {
+
+type TypicalListComponentType = {
+  header: { title: string, subtitle: string, buttons: { text: string, to: string }[] },
+  data: any,
+}
+
+const BaseCreateComponent = (props: TypicalListComponentType) => {
   // JSX
   return (
     <React.Fragment>
-      BaseCreateComponent
+      {/* BaseCreateComponent */}
+      <TypicalCreateComponent header={props.header} data={props.data} />
     </React.Fragment>
   )
 }

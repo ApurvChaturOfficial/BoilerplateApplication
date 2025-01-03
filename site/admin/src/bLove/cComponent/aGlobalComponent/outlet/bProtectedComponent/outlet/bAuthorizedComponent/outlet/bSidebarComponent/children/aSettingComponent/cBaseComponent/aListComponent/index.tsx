@@ -1,11 +1,20 @@
 import React from "react"
 
+import TypicalListComponent from "../../../../component/aTypicalListComponent";
 
-const BaseListComponent = () => {
+
+type TypicalListComponentType = {
+  header: { title: string, subtitle: string, buttons: { text: string, to: string }[] },
+  data: any,
+  columns: any
+}
+
+const BaseListComponent = (props: TypicalListComponentType) => {
   // JSX
   return (
     <React.Fragment>
-      BaseListComponent
+      {/* BaseListComponent */}
+      <TypicalListComponent header={props.header} data={props.data} columns={props.columns} />
     </React.Fragment>
   )
 }

@@ -5,7 +5,7 @@ const SidebarComponent = ({ children }: { children: React.ReactNode }) => {
   // JSX
   return (
     <React.Fragment>
-      SidebarComponent
+      {/* SidebarComponent */}
       { children }
     </React.Fragment>
   )

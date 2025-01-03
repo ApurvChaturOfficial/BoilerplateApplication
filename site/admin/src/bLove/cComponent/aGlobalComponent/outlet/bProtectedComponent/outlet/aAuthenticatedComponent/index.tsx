@@ -5,7 +5,7 @@ const AuthenticatedComponent = ({ children }: { children: React.ReactNode }) => 
   // JSX
   return (
     <React.Fragment>
-      AuthenticatedComponent
+      {/* AuthenticatedComponent */}
       { children }
     </React.Fragment>
   )

@@ -5,7 +5,7 @@ const TopbarComponent = ({ children }: { children: React.ReactNode }) => {
   // JSX
   return (
     <React.Fragment>
-      TopbarComponent
+      {/* TopbarComponent */}
       { children }
     </React.Fragment>
   )

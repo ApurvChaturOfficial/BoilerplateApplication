@@ -5,7 +5,7 @@ const GlobalComponent = ({ children }: { children: React.ReactNode }) => {
   // JSX
   return (
     <React.Fragment>
-      GlobalComponent
+      {/* GlobalComponent */}
       { children }
     </React.Fragment>
   )
